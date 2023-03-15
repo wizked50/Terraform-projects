@@ -1,0 +1,17 @@
+# Define the AWS provider
+provider "aws" {
+  region = "us-west-2"
+}
+
+# Define an EC2 instance
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+  key_name      = "example-key"
+}
+
+# Define an output
+output "public_ip" {
+  value = aws_instance.example.public_ip
+}
+#edit variable where necessary then run terraform validate
