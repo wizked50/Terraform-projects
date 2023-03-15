@@ -1,0 +1,24 @@
+# Define input variables
+variable "region" {
+  description = "The AWS region to launch the EC2 instance in"
+  type        = string
+  default     = "us-east-1"
+}
+
+variable "instance_type" {
+  description = "The type of EC2 instance to launch"
+  type        = string
+  default     = "t2.micro"
+}
+
+# Define the provider
+provider "aws" {
+  region = var.region
+}
+
+# Define the EC2 instance
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = var.instance_type
+  key_name      = "example-key"
+}
