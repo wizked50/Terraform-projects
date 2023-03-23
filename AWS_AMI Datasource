@@ -10,7 +10,7 @@ data "aws_ami" "example" {
 
   filter {
     name   = "name"
-    values = ["myami-*"]
+    values = [" ami-0e2ff06baacbd9ea4"]
   }
 
   filter {
