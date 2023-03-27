@@ -1,3 +1,5 @@
+#Use this installation pattern to get terraform installed into your server
+
 #First we need to create an EC2 instance in AWS, T2 micro or T2.medium
 #Install yum-config-manager to manage your repositories.
 
